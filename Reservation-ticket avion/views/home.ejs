@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://localhost:8080/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="http://localhost:8080/assets/css/card.css"> -->
+
+    <title>Booking</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="http://localhost:8080/assets/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <form>
+                            <div class="form-group">
+                                <div class="form-checkbox">
+                                    <label for="one-way">
+                                        <input type="radio" id="one-way" name="flight-type">
+                                        <span></span>Direct
+                                    </label>
+                                    <label for="multi-city">
+                                        <input type="radio" id="multi-city" name="flight-type">
+                                        <span></span>stopover
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Flying from</span>
+                                        <select class="form-control" name="" id="">
+                                            <option value="Please choose">-please chooose-</option>
+                                            <% for(var i=0; i < to.length; i++) { %>
+                                                <option value="<%= to[i].id %>"> <%= from[i].depart %></option>
+                                                <% } %>
+                                        </select>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Flyning to</span>
+                                        <select class="form-control" name="" id="">
+                                            <option value="Please choose">-please chooose-</option>
+                                            <% for(var i=0; i < to.length; i++) { %>
+                                                <option value="<%= to[i].id %>">
+                                                    <%= to[i].arrivee %>
+                                                </option>
+                                                <% } %>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <span class="form-label">Departing</span>
+                                        <input class="form-control" type="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <span class="form-label">Returning</span>
+                                        <input class="form-control" type="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <span class="form-label">Persons</span>
+                                        <input type="number" class="form-control">
+                                        <span class="select-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-btn">
+                                        <button class="submit-btn">Show flights</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="courses-container">
+        <div class="course">
+            <div class="course-preview">
+                <h6>Vol</h6>
+                <h2>Royal Air Maroc</h2>
+            </div>
+            <div class="course-info">
+                <h6>Details</h6>
+                <h2>Prix: 6000dhs</h2>
+                <button class="btn">Réserver</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
